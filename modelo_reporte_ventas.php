@@ -84,9 +84,10 @@
     $vendedor = $sheet->getCell("L".$row)->getValue();
     $e_commerce = $sheet->getCell("M".$row)->getValue();
     $direccion = $sheet->getCell("N".$row)->getValue();	
-    $tipo_cliente = $sheet->getCell("O".$row)->getValue();	
+    $tipo_cliente = $sheet->getCell("O".$row)->getValue();
+    $sucursal = $sheet->getCell("P".$row)->getValue();	
 
-    $crear = mysqli_query($conexion,"insert into detalle_sell_out (reporte_ventas,id_distribuidor,id_pais_distribuidor,id_anio,id_mes,id_q,factura,fecha_venta,producto,unidades,precio,taxid_cliente,nombre_cliente,telefono_cliente,email_cliente,segmento,ciudad,vendedor,e_commerce,direccion, tipo_cliente) values ('$id_reporte_ventas','$id_distribuidor','$id_pais_distribuidor','$id_anio','$id_mes','$id_q','$factura','$fecha_venta','$producto','$unidades','$precio','$taxid_cliente','$nombre_cliente','$telefono_cliente','$email_cliente','$segmento','$ciudad','$vendedor','$e_commerce','$direccion', '$tipo_cliente')");
+    $crear = mysqli_query($conexion,"insert into detalle_sell_out (reporte_ventas,id_distribuidor,id_pais_distribuidor,id_anio,id_mes,id_q,factura,fecha_venta,producto,unidades,precio,taxid_cliente,nombre_cliente,telefono_cliente,email_cliente,segmento,ciudad,vendedor,e_commerce,direccion, tipo_cliente, sucursal) values ('$id_reporte_ventas','$id_distribuidor','$id_pais_distribuidor','$id_anio','$id_mes','$id_q','$factura','$fecha_venta','$producto','$unidades','$precio','$taxid_cliente','$nombre_cliente','$telefono_cliente','$email_cliente','$segmento','$ciudad','$vendedor','$e_commerce','$direccion', '$tipo_cliente','$sucursal')");
    
 }
 

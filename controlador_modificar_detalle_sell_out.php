@@ -18,6 +18,7 @@
  $e_commerce = '';
  $direccion = '';
  $tipo_cliente = '';
+ $sucursal = '';
 
  // Options for Client Type in Sell OUT view
  
@@ -50,6 +51,7 @@
   $e_commerce = trim(mysqli_real_escape_string($conexion,$_POST['e_commerce']));
   $direccion = trim(mysqli_real_escape_string($conexion,$_POST['direccion']));
   $tipo_cliente = trim(mysqli_real_escape_string($conexion,$_POST['tipo_cliente']));
+  $sucursal = trim(mysqli_real_escape_string($conexion,$_POST['sucursal']));
 
   $error_factura = '';
   $error_fecha_venta = '';
@@ -65,6 +67,7 @@
   $error_vendedor = '';
   $error_e_commerce = '';
   $error_tipo_cliente = '';
+  $error_sucursal = '';
 
   if($factura == '')
   {
@@ -111,6 +114,12 @@
     $error_tipo_cliente = '<br><div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Error: </strong>Escribir tipo de cliente.</div>';
     $error = 1;
   }
+  if($sucursal == '')
+  {
+   $error_sucursal = '<br><div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Error: </strong>Escribir Sucursal.</div>';
+   $error = 1;
+  }
+
   
   require_once ('modelo_modificar_detalle_sell_out.php');
     

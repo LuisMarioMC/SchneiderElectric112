@@ -56,7 +56,8 @@
 		    <th>Vendedor</th>
 		    <th>E-Commerce</th>
 			  <th>Dirección</th>
-        <th>Tipo de cliente</th>				
+        <th>Tipo de cliente</th>
+		<th>Sucursal</th>				
 			<th></th>
 		   </tr>
           </thead>
@@ -77,7 +78,8 @@
 		    <th>Vendedor</th>	
 			  <th>E-Commerce</th>
 			  <th>Dirección</th>
-        <th>Tipo de cliente</th>	
+        <th>Tipo de cliente</th>
+		<th>Sucursal</th>	
 			<th></th>
 		   </tr>
           </tfoot>

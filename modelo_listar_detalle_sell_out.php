@@ -88,6 +88,11 @@
   // Tipo cliente
   $detalle[$i]['error_tipo_cliente'] = 0;
   $detalle[$i]['tipo_cliente'] = $resultado_consulta_detalle_sell_out['tipo_cliente'];
+//Sucursal
+  $detalle[$i]['error_sucursal'] = 0;
+   $detalle[$i]['sucursal'] = $resultado_consulta_detalle_sell_out['sucursal'];
+
+
 
 
   if($estado_detalle_sell_out == 0)
@@ -546,6 +551,9 @@
     }
     
   } 
+  //Sucursal
+  $detalle[$i]['error_sucursal'] = 0;
+   $detalle[$i]['sucursal'] = $resultado_consulta_detalle_sell_out['sucursal'];
  
   $i++;
  }

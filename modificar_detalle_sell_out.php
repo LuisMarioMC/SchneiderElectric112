@@ -162,6 +162,13 @@
           <?php echo $error_tipo_cliente ?>
         </div>
       </div>
+	  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+        <div class="form-group">
+        <label>Sucursal</label>
+          <input class="form-control" id="sucursal" name="sucrusal" type="text" title="Ingrese sucursal" value="<?php echo $sucursal ?>" placeholder="Sucursal" required>
+          <?php echo $errror_sucursal ?>
+        </div>
+      </div>
 				 
 		   <?php echo $listar_mensaje ?>
 		   

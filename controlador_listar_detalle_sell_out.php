@@ -223,6 +223,11 @@
    } else {
     $listar .= '  <td align="center"><div data-toggle="popover" data-placement="top" data-content="El tipo de cliente no puede estar vacío "><font color="red"><i class="fa fa-question-circle fa-lg" style="color:red"></i></font></div></td>';
    } 
+
+//Sucursal
+$listar .= '  <td>'.$detalles['sucursal'].'</td>';
+
+
    $listar .= '  <td align="right" width="70px">';
     
    if($estado_reporte_ventas == 0)

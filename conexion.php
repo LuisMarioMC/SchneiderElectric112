@@ -5,7 +5,7 @@
  $bdservidor = 'localhost';
  $bdusuario = 'root';
  $bdcontrasenia = '';
-$bd = 'latone_schneiderlocal';
+$bd = 'latone_schneider';
  $conexion = @mysqli_connect($bdservidor,$bdusuario,$bdcontrasenia,$bd);
 
  @mysqli_select_db($bd,$conexion);

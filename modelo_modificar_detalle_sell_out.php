@@ -29,6 +29,7 @@
   $e_commerce = $resultado_consulta_detalle_sell_out['e_commerce'];
   $direccion = $resultado_consulta_detalle_sell_out['direccion'];
   $tipo_cliente = $resultado_consulta_detalle_sell_out['tipo_cliente'];
+  $sucursal = $resultado_consulta_detalle_sell_out['sucursal'];
  }
  else
  {
@@ -47,11 +48,12 @@
   $e_commerce2 = $resultado_consulta_detalle_sell_out['e_commerce'];
   $direccion2 = $resultado_consulta_detalle_sell_out['direccion'];
   $tipo_cliente2 = $resultado_consulta_detalle_sell_out['tipo_cliente'];
+  $sucursal2 = $resultado_consulta_detalle_sell_out['sucursal'];
  }
   
  
   if($error == 0) {
-    $modificar = @mysqli_query($conexion,"update detalle_sell_out set factura = '$factura', fecha_venta = '$fecha_venta', date_fecha_venta = '0001-01-01', producto = '$producto', id_producto = '0', id_actividad = '0', id_linea = '0', unidades = '$unidades', int_unidades = 0, precio = '$precio', float_precio = 0, taxid_cliente = '$taxid_cliente', id_cliente = '0', nombre_cliente = '$nombre_cliente', telefono_cliente = '$telefono_cliente', email_cliente = '$email_cliente', segmento = '$segmento', id_segmento = '0', ciudad = '$ciudad', id_ciudad = '0', id_departamento = '0', id_zona = '0', id_pais = '0', vendedor = '$vendedor', id_vendedor = '0', e_commerce = '$e_commerce', direccion = '$direccion', tipo_cliente = '$tipo_cliente' where id = '$id_modificar'");
+    $modificar = @mysqli_query($conexion,"update detalle_sell_out set factura = '$factura', fecha_venta = '$fecha_venta', date_fecha_venta = '0001-01-01', producto = '$producto', id_producto = '0', id_actividad = '0', id_linea = '0', unidades = '$unidades', int_unidades = 0, precio = '$precio', float_precio = 0, taxid_cliente = '$taxid_cliente', id_cliente = '0', nombre_cliente = '$nombre_cliente', telefono_cliente = '$telefono_cliente', email_cliente = '$email_cliente', segmento = '$segmento', id_segmento = '0', ciudad = '$ciudad', id_ciudad = '0', id_departamento = '0', id_zona = '0', id_pais = '0', vendedor = '$vendedor', id_vendedor = '0', e_commerce = '$e_commerce', direccion = '$direccion', id_tipo_cliente = '$id_tipo_cliente', sucursal= '$sucursal' where id = '$id_modificar'");
   }
   
 ?>
