@@ -1,0 +1,177 @@
+<?php
+ require_once ('controlador_modificar_meta_sell_out.php');
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <?php
+   require_once ('metadatos.php');
+   echo ' <title>Modificar Meta Sell Out</title>'; 
+   require_once ('librerias_css.php');
+   require_once ('funciones_javascript_meta_sell_out.php');
+  ?>
+ </head>
+ 
+ <body>
+  <div id="wrapper">
+   
+   <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <?php require_once ('menu_superior.php'); require_once ('menu_lateral.php');?>
+   </nav>
+   
+   <div id="page-wrapper">
+	<br>
+    <div class="row">
+     <div class="col-lg-12">
+      <div class="panel panel-default">
+       <div class="panel-heading">
+        Modificar Meta Sell Out
+       </div>
+       
+	   <div class="panel-body">
+	   
+	    <ol class="breadcrumb">
+		 <?php echo $miga_pan ?>
+		</ol>
+	   
+	    <ul class="nav nav-tabs">
+		 <?php
+		  echo'<li><a href="listar_meta_sell_out.php">Listar</a></li>';
+		  echo'<li><a href="crear_meta_sell_out.php">Crear</a></li>';	      
+		 ?>
+		</ul>
+	    <br>
+	   
+        <div class="row">         
+		 
+         <div class="col-lg-12">		 
+		 
+		  <form class="form-horizontal" role="form" name="formulario" action="modificar_meta_sell_out.php?id=<?php echo $id_modificar ?>" autocomplete="off" method="post" enctype="multipart/form-data">  
+	
+		   <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+ 			<div class="form-group">
+			 <label>Distribuidor</label>
+             <?php echo $menu_distribuidor ?>
+			</div>
+		   </div>
+		   		
+		   <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+ 			<div class="form-group">
+			 <label>A&ntilde;o</label>
+             <?php echo $menu_anio ?>
+			</div>
+		   </div>
+				
+		   <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+ 			<div class="form-group">
+			 <label>L&iacute;nea</label>
+             <?php echo $menu_linea ?>
+			</div>
+		   </div>
+
+		   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+ 			<div class="form-group">
+			 <label>Meta Q1</label>
+             <input class="form-control" id="q1" name="q1" type="number" title="Ingrese la Meta del Q1" value="<?php echo $q1 ?>" placeholder="Q1" required/>
+			</div>
+		   </div>
+
+		   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+ 			<div class="form-group">
+			 <label>% Comisi&oacute;n Q1</label>
+             <input class="form-control" id="cq1" name="cq1" type="text" title="Ingrese la Comisi&oacute; del Q1" value="<?php echo $cq1 ?>" placeholder="% Comisi&oacute;n Q1" maxlength="4" required/>
+			</div>
+		   </div>
+		   
+		   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+ 			<div class="form-group">
+			 <label>Meta Q2</label>
+             <input class="form-control" id="q2" name="q2" type="number" title="Ingrese la Meta del Q2" value="<?php echo $q2 ?>" placeholder="Q2" required/>
+			</div>
+		   </div>
+
+		   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+ 			<div class="form-group">
+			 <label>% Comisi&oacute;n Q2</label>
+             <input class="form-control" id="cq2" name="cq2" type="text" title="Ingrese la Comisi&oacute; del Q2" value="<?php echo $cq2 ?>" placeholder="% Comisi&oacute;n Q2" maxlength="4" required/>
+			</div>
+		   </div>
+		   
+		   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+ 			<div class="form-group">
+			 <label>Meta Q3</label>
+             <input class="form-control" id="q3" name="q3" type="number" title="Ingrese la Meta del Q3" value="<?php echo $q3 ?>" placeholder="Q3" required/>
+			</div>
+		   </div>
+
+		   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+ 			<div class="form-group">
+			 <label>% Comisi&oacute;n Q3</label>
+             <input class="form-control" id="cq3" name="cq3" type="text" title="Ingrese la Comisi&oacute; del Q3" value="<?php echo $cq3 ?>" placeholder="% Comisi&oacute;n Q3" maxlength="4" required/>
+			</div>
+		   </div>
+		   
+		   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+ 			<div class="form-group">
+			 <label>Meta Q4</label>
+             <input class="form-control" id="q4" name="q4" type="number" title="Ingrese la Meta del Q4" value="<?php echo $q4 ?>" placeholder="Q4" required/>
+			</div>
+		   </div>
+
+		   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+ 			<div class="form-group">
+			 <label>% Comisi&oacute;n Q4</label>
+             <input class="form-control" id="cq4" name="cq4" type="text" title="Ingrese la Comisi&oacute; del Q4" value="<?php echo $cq4 ?>" placeholder="% Comisi&oacute;n Q4" maxlength="4" required/>
+			</div>
+		   </div>
+		   		   
+		   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+ 			<div class="form-group">
+			 <?php
+			  echo $error_distribuidor;
+			  echo $error_anio;
+			  echo $error_linea;
+			  echo $error_q1;
+			  echo $error_cq1;
+			  echo $error_q2;
+			  echo $error_cq2;
+			  echo $error_q3;
+			  echo $error_cq3;
+			  echo $error_q4;
+			  echo $error_cq4;
+			 ?>
+			</div>
+		   </div>
+		   
+		   <?php echo $listar_mensaje ?>
+		   
+           <div align="right" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <button type="submit" class="btn btn-default">Modificar</button> 			
+		   </div>
+		
+		  </form>
+			
+		 </div>
+         <!-- /.col-lg-12 -->		
+        </div>
+        <!-- /.row -->
+       </div>
+       <!-- /.panel-body -->
+      </div>
+      <!-- /.panel -->
+     </div>
+     <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+			
+   </div>
+   
+  </div>
+  
+  <?php
+   require_once ('librerias_javascript.php');
+  ?>
+    
+ </body>
+</html>
